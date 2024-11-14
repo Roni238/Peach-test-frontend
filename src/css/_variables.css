@@ -1,0 +1,13 @@
+:root {
+    /* colors */
+    --border-color:#D9D9D9;
+    --gray-color: #444444;
+    --pink-color: #B01736;
+    --red-color: #A30C33;
+    --blue-color: rgba(45, 54, 83, 6);
+    
+    /* fonts */
+    --main-font: 'proxima_nova_condensed', sans-serif ;
+
+    --link-size: 18px;
+}
