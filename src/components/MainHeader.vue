@@ -19,7 +19,7 @@ export default {
     data(){
         return {
             links:[
-                //лучше передовать в router-link не path а name но я буду передавать ссылки чтобы vue не спамил ошибки из router
+                //лучше передавать в router-link не path а name но я буду передавать ссылки чтобы vue не спамил ошибки из router
                 {title: 'Облачные решения', path: '/cloud-solutions'},
                 {title: 'Кибербезопасность', path: '/cybersecurity'},
                 {title: 'Импортозамещение', path: '/import-substitution'},
@@ -54,7 +54,7 @@ export default {
     }
 
     // тут должно быть @include mobile но под палншеты нет адаптива в макете, по этому возьму побольше чтобы nuv не сслыки не корёжило
-    @media (max-width: 501px){
+    @include mobile500 {
         .header {
             flex-direction: column;
             padding: 16px 5px;

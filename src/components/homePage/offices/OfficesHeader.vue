@@ -66,7 +66,7 @@ export default {
     selectFilter(filter) {
       this.$emit("selectFilter", filter);
     },
-    // показать или скрыть список городов для выбранного региона
+    // показать || скрыть список городов для выбранного региона
     toggleRegion(regionName) {
         if (this.isMobile){
             this.openedRegion = this.openedRegion === regionName ? null : regionName
@@ -97,7 +97,7 @@ export default {
         box-shadow: 0px 0px 40px 0px #0000000f;
         color: $gray-color;
       
-        @include mobile500{
+        @include mobile500 {
             padding: 0px 5px 0px 5px;
         }
         @include mobile {
@@ -130,7 +130,7 @@ export default {
         height: 100%;
         overflow-x: auto;
     
-        @include mobile {
+        @include mobile500 {
             gap: 16px;
         }
     }
@@ -151,7 +151,7 @@ export default {
             color: $red-color;
         }
     
-        @include mobile {
+        @include mobile500 {
             font-size: 14px;
             line-height: 16px;
         }
@@ -176,7 +176,7 @@ export default {
         margin-bottom: 5px;
         line-height: 20px;
         
-        @include mobile {
+        @include mobile500 {
             display: flex;
             font-size: 14px;
             line-height: 14px;
@@ -190,7 +190,7 @@ export default {
         font-weight: 400;
         line-height: 20px;
 
-        @include mobile {
+        @include mobile500 {
             font-size: 14px;
             font-weight: 400;
             line-height: 14px;
@@ -221,14 +221,17 @@ export default {
             z-index: -1;
             background-color: #ffffffd7;
         }
-        @include mobile {
+        @include mobile500 {
             top: 0px;
-            padding: 53px 5px 19px;
+            padding: 84px 5px 19px;
             max-width: 100%;
             box-sizing: border-box;
             display: grid;
             grid-template-columns: 1fr 1fr auto;
             gap: 15px 30px;
+        }
+        @include mobile {
+            padding: 53px 5px 19px;
         }
     }
 }

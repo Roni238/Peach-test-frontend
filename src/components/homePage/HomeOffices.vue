@@ -29,7 +29,7 @@ export default {
     return {
       filters: [],
       regions: [],
-      selectedFilter: "Все", // дефолтный фильтр
+      selectedFilter: "Все",
     };
   },
   computed: {
@@ -48,7 +48,7 @@ export default {
     },
     async loadRegions() {
       try {
-        const response = await fetch("/data/regions.json")
+        const response = await fetch(`${process.env.VUE_APP_BASE_URL}data/regions.json`)
         const data = await response.json();
         this.filters = ["Все", ...data.regions.map(region => region.name)]
         this.regions = data.regions
