@@ -3,7 +3,7 @@
         <header class="corporate-life__header">
             <h2 class="corporate-life__title title">Корпоративная жизнь</h2>
 
-            <div class="corporate-life__buttons" v-if="!isMobile">
+            <div class="corporate-life__buttons" v-if="getScreenWidth > 501">
                 <button class="corporate-life__button" @click="changeSlide(-1)">
                     <red-arrow-icon class="corporate-life__button-icon" />
                 </button>
@@ -44,7 +44,7 @@ import { mapGetters } from "vuex";
 export default {
     name: "home-corporate-life",
     computed: {
-        ...mapGetters(["isMobile"])
+        ...mapGetters(["isMobile", "getScreenWidth"])
     },
     data() {
         return {
@@ -77,7 +77,7 @@ export default {
         },
         onTouchEnd() {
             //переключение свайпами для телефонов
-            if(this.isMobile){
+            if(this.getScreenWidth < 501){
                 const swipeDistance = this.touchStartX - this.touchEndX
 
                 if (swipeDistance > 50) {
