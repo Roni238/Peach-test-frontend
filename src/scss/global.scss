@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'proxima_nova_condensed';
+    src: url('@/assets/fonts/proxima_nova_condensed_regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: $main-font;
+    margin: 0px;
+    padding: 0px;
+}
+
+h1.title {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 67.2px;
+    color: $pink-color;
+}
+h2.title {
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 56px;
+    text-align: center;
+    color: $gray-color;
+}
+h3.title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 26.4px;
+    color: #FFF;
+}
+.emphasize {
+    color: $pink-color;
+}
+
+@mixin mobile {
+    @media (max-width: 321px) {
+        @content;
+    }
+}
+@mixin mobile500 {
+    @media (max-width: 501px) {
+        @content;
+    }
+}
+
+@include mobile {
+    h1.title{
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 33.6px;
+    }
+    h2.title {
+        font-size: 28px;
+        line-height: 28px;
+    }
+    h3.title {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 20px;
+    }
+}

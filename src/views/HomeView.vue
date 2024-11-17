@@ -1,18 +1,56 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+      <home-presentation class="home__presentation"/>
+      <home-offices class="home__offices"/>
+      <home-mission class="home__mission"/>
+      <home-business-areas class="home__business-areas"/>
+      <home-compensation-package class="home__compensation-package"/>
+      <home-corporate-life class="home__corporate-life"/>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import HomePresentation from '@/components/homePage/HomePresentation.vue'
+import HomeOffices from '@/components/homePage/HomeOffices.vue'
+import HomeMission from '@/components/homePage/HomeMission.vue'
+import HomeBusinessAreas from '@/components/homePage/HomeBusinessAreas.vue'
+import HomeCompensationPackage from '@/components/homePage/HomeCompensationPackage.vue'
+import HomeCorporateLife from '@/components/homePage/HomeCorporateLife.vue'
 
 export default {
   name: 'HomeView',
   components: {
-    HelloWorld
+    HomePresentation, HomeOffices, HomeMission, HomeBusinessAreas, HomeCompensationPackage, HomeCorporateLife
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.home {
+  &__presentation {
+    margin: 79px auto;
+
+    @include mobile {
+      margin: 27px auto 0px;
+    }
+  }
+  &__corporate-life{
+    margin-bottom: 67px;
+
+    @include mobile {
+      margin-bottom: 50px;
+    }
+  }
+  &__presentation,
+  &__offices,
+  &__mission,
+  &__business-areas,
+  &__compensation-package{
+    margin-bottom: 100px;
+
+    @include mobile {
+      margin-bottom: 50px;
+    }
+  }
+}
+</style>
