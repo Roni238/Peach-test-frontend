@@ -10,14 +10,16 @@ dotenv.config({ path: './.env' });
 
 module.exports = (env, argv) => {
   const isProduction = argv.mode === 'production';
-
+  process.env.VUE_APP_BASE_URL = isProduction ? process.env.VUE_APP_BASE_URL : '/'
+  const publicPath = process.env.VUE_APP_BASE_URL 
+  
   return {
     entry: './src/main.js',
 
     output: {
       path: path.resolve(__dirname, 'dist'),
       filename: 'bundle.[contenthash].js',
-      publicPath: process.env.VUE_APP_BASE_URL || '/',
+      publicPath: publicPath,
     },
 
     mode: isProduction ? 'production' : 'development',
@@ -99,7 +101,7 @@ module.exports = (env, argv) => {
         template: './public/index.html',
         inject: 'body',
         templateParameters: {
-          BASE_URL: process.env.VUE_APP_BASE_URL,
+          BASE_URL: publicPath,
         },
       }),
       new VueLoaderPlugin(),

@@ -29,6 +29,9 @@ export default {
 .home {
   &__presentation {
     margin: 79px auto;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUp 0.8s ease-out forwards;
 
     @include mobile {
       margin: 27px auto 0px;
@@ -51,6 +54,18 @@ export default {
     @include mobile {
       margin-bottom: 50px;
     }
+  }
+}
+
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); 
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 </style>
