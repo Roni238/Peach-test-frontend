@@ -24,7 +24,7 @@
                 <li class="offices-menu__list-title" @click="toggleRegion(region.name)">
                     {{ region.name }}   
                     <!-- лишнюю иконку нет смысла делать тк есть такой символ, пишу его не юникодом для большей понятности что это -->
-                    <b class="offices-menu__dropdown-arrow" v-if="isMobile" 
+                    <b class="offices-menu__dropdown-arrow"
                         :class="{ 'offices-menu__arrow--active': region.name === openedRegion }">▼</b>
                 </li>
                 
@@ -159,6 +159,11 @@ export default {
 
     &__dropdown-arrow{
         scale: 0.6;
+        display: none;
+
+        @include mobile {
+            display: block;
+        }
     }
     &__arrow--active {
         transform: rotate(180deg);
@@ -207,8 +212,10 @@ export default {
         background-color: #FFF;
         width: 100%;
         display: flex;
+        gap: 24px;
         justify-content: space-between;
-        padding: 30px 65.8px;
+        padding: 30px 68px;
+        overflow-y: auto;
         box-sizing: border-box;
         z-index: 1;
         color: #444;
@@ -233,6 +240,9 @@ export default {
         @include mobile {
             padding: 53px 5px 19px;
         }
+    }
+    &__dropdown-title{
+        width: max-content;
     }
 }
 
