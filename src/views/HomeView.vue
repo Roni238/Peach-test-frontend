@@ -1,12 +1,12 @@
 <template>
-  <div class="home">
+  <main class="home">
       <home-presentation class="home__presentation"/>
       <home-offices class="home__offices"/>
       <home-mission class="home__mission"/>
       <home-business-areas class="home__business-areas"/>
       <home-compensation-package class="home__compensation-package"/>
       <home-corporate-life class="home__corporate-life"/>
-  </div>
+  </main>
 </template>
 
 <script>

@@ -1,7 +1,7 @@
 <template>
     <header class="header">
         <router-link :to="{path: '/' }"> 
-            <logo-icon class="header__logo"/>
+            <base-icon class="header__logo" :name="'logo'"/>
         </router-link>
 
         <nav class="header__nav">
@@ -15,7 +15,7 @@
 </template>
 <script>
 export default {
-    name: 'main-header',
+    name: 'base-header',
     data(){
         return {
             links:[

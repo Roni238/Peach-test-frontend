@@ -1,37 +1,37 @@
 <template>
-    <div class="presentation">
+    <section class="presentation">
         <h1 class="presentation__title title">Softline</h1>
 
         <p class="presentation__description">
           Ведущий поставщик IT-решений и сервисов.* Мы предлагаем комплексные IT-решения, облака, программное и аппаратное обеспечение, решения по цифровой трансформации и кибербезопасности, а также широкий спектр IT-услуг.
         </p>
 
-        <div class="presentation__statistics" v-if="isMobile">
-            <div class="presentation__status">
+        <ul class="presentation__statistics" v-if="isMobile">
+            <li class="presentation__status">
                 <span class="presentation__simbol">></span>
                 <span class="presentation__numbers">30 лет</span>
                 <p>на IT-рынке</p>
-            </div>
-            <div class="presentation__status">
+            </li>
+            <li class="presentation__status">
                 <span class="presentation__numbers">4600</span>
                 <p>сотрудников в России</p>
-            </div>
-            <div class="presentation__status">
+            </li>
+            <li class="presentation__status">
                 <span class="presentation__numbers">25</span>
                 <p>городов России</p>
-            </div>
-            <div class="presentation__status">
+            </li>
+            <li class="presentation__status">
                 <span class="presentation__numbers">2000</span>
                 <span class="presentation__simbol">+</span>
                 <p>разработчиков</p>
-            </div>
-            <div class="presentation__status">
+            </li>
+            <li class="presentation__status">
                 <span class="presentation__numbers">3000</span>
                 <span class="presentation__simbol">+</span>
                 <p>сотрудников ежегодно <br> проходят оценку и обучение</p>
-            </div>
-        </div>
-    </div>
+            </li>
+        </ul>
+    </section>
 </template>
 
 <script>

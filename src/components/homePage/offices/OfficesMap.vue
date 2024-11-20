@@ -1,5 +1,5 @@
 <template>
-    <div class="offices-map">
+    <article class="offices-map">
         <div class="offices-map__content">
             <div class="offices-map__point" v-for="dot in selectedCity" :key="dot.name"
                 :style="{ left: `${dot.x}px`, top: `${dot.y}px`, fontSize: `${dot?.fontSize}px` }"
@@ -8,7 +8,7 @@
                 <div class="offices-map__point-dot-label" :style="{ bottom: dot?.onTop ? '100%' : 'none' }">{{ dot.name }}</div>
             </div>
         </div>
-    </div>
+    </article>
 </template>
 <script>
 export default {

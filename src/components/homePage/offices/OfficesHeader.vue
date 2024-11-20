@@ -1,9 +1,9 @@
 <template>
-    <div class="offices-menu">
+    <article class="offices-menu">
         <header class="offices-menu__header">
             <div class="offices-menu__dropdown-btn" @click="toggleChooseOffices">
                 <div class="offices-menu__dropdown-title">Офисы Softline</div>
-                <arrow-icon :class="{ 'offices-menu__arrow--active': showAllOffice }" />
+                <base-icon :name="'arrow'" :class="{ 'offices-menu__arrow--active': showAllOffice }"/>
             </div>
 
             <ul class="offices-menu__filter-list">
@@ -33,7 +33,7 @@
                 </template>
             </ul>
         </div>
-</div>
+    </article>
 </template>
 
 <script>

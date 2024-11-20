@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <div class="main-wrapper">
-      <main-header/>
+      <base-header/>
       <router-view/>
     </div>
   </div>
@@ -9,12 +9,7 @@
 
 <script>
 
-import MainHeader from "./components/MainHeader.vue";
-
 export default {
-  components :{
-    MainHeader
-  },
   mounted() { 
     window.addEventListener('resize', ()=>this.$store.commit('setScreenWidth'))
   },

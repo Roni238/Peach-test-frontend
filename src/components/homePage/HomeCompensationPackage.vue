@@ -1,11 +1,11 @@
 <template>
-    <div class="compensation-package">
+    <section class="compensation-package">
         <h2 class="compensation-package__title title">Компенсационный пакет</h2>
 
         <div class="compensation-package__advantage-list">
 
             <div class="compensation-package__advantage-item" v-for="advantage in advantages" :key="advantage.title">
-                <component class="compensation-package__item-icon" :is="advantage.icon"></component>
+                <base-icon class="compensation-package__item-icon" :name="advantage.icon"/>
                 <p class="compensation-package__item-title"> {{ advantage.title }}</p>
             </div> 
         </div>
@@ -20,11 +20,11 @@
         <div class="compensation-package__advantage-list compensation-package__advantage-list--motivators">
 
             <div class="compensation-package__advantage-item compensation-package__advantage-item--compact" v-for="motivator in motivators" :key="motivator.title">
-                <component class="compensation-package__item-icon" :is="motivator.icon"></component>
+                <base-icon class="compensation-package__item-icon" :name="motivator.icon"/>
                 <p class="compensation-package__item-title"> {{ motivator.title }}</p>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 <script>
 export default {
@@ -34,37 +34,37 @@ export default {
             advantages: [
                 {
                     title: 'ДМС',
-                    icon: 'dmc-icon'
+                    icon: 'dmc'
                 },
                 {
                     title: 'Выходной в день рождения',
-                    icon: 'birthday-icon'
+                    icon: 'birthday'
                 },
                 {
                     title: 'Корпоративная мобильная связь',
-                    icon: 'communication-icon'
+                    icon: 'communication'
                 },
                 {
                     title: 'Корпоративные скидки на спорт',
-                    icon: 'sport-icon'
+                    icon: 'sport'
                 },
                 {
                     title: 'LTI',
-                    icon: 'lti-icon'
+                    icon: 'lti'
                 }
             ],
             motivators: [
                 {
                     title: 'Оргтехники',
-                    icon: 'office-equipment-icon'
+                    icon: 'officeEquipment'
                 },
                 {
                     title: 'ДМС',
-                    icon: 'dmc-icon'
+                    icon: 'dmc'
                 },
                 {
                     title: 'Ипотеки',
-                    icon: 'mortgage-icon'
+                    icon: 'mortgage'
                 }
             ]
         }

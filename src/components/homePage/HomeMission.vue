@@ -1,5 +1,5 @@
 <template>
-    <div class="mission">
+    <section class="mission">
         <div class="mission__content">
             <h2 class="mission__title title">Миссия Softline</h2>
             <p class="mission__discription">Мы помогаем организациям трансформироваться, работать эффективно и безопасно в условиях цифровой экономики.</p>
@@ -9,7 +9,7 @@
             <img class="mission__patern mission__patern--left" :src="require(`@/assets/image/paterns/left-pattern.png`)">
             <img class="mission__patern mission__patern--right" :src="require(`@/assets/image/paterns/right-pattern.png`)">
         </div>
-    </div>
+    </section>
 </template>
 <script>
 export default {

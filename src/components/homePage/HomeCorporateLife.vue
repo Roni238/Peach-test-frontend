@@ -1,14 +1,15 @@
 <template>
-    <div class="corporate-life">
+    <section class="corporate-life">
         <header class="corporate-life__header">
             <h2 class="corporate-life__title title">Корпоративная жизнь</h2>
 
             <div class="corporate-life__buttons" v-if="getScreenWidth > 501">
                 <button class="corporate-life__button" @click="changeSlide(-1)">
-                    <red-arrow-icon class="corporate-life__button-icon" />
+                    <base-icon class="corporate-life__button-icon" :name="'redArrow'"/>
                 </button>
+
                 <button class="corporate-life__button" @click="changeSlide(1)">
-                    <red-arrow-icon class="corporate-life__button-icon" />
+                    <base-icon class="corporate-life__button-icon" :name="'redArrow'"/>
                 </button>
             </div>
         </header>
@@ -35,7 +36,7 @@
                 />
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <script>
@@ -132,6 +133,10 @@ export default {
         &:last-child .corporate-life__button-icon {
             transform: rotate(180deg);
         }
+    }
+    
+    &__button-icon{
+        margin: auto;
     }
 
     &__slider-container {
