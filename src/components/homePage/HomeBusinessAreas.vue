@@ -7,6 +7,8 @@
       <!-- в отличие от точек на карте, areas данные врятли будут меняться, 
        по этому выносить в отдельный json и делать их подгрузку не требуется 
        ( можно вынести просто для удобства чтобы дата меньше была ) -->
+
+       
       <div  class="business-areas__area-item" :class="{ 'business-areas__area-item--active': isAreaOpen(area.title) }"
           :style="{ backgroundImage: `url(${require('@/assets/' + area.img)})` }"
           v-for="area in areas" :key="area.title"
@@ -20,6 +22,7 @@
               <h3 class="business-areas__item-title title">{{ area.title }} </h3>
               <base-icon class="business-areas__item-dropdown" :name="'areaDropdown'" v-if="isMobile" @click.stop="clearArea()"/>
           </header>
+          
           <p class="business-areas__item-description" v-if="isAreaOpen(area.title)">{{ area.description }}</p>
         </div>
       </div>
@@ -89,6 +92,7 @@ export default {
   }
 }
 </script>
+
 <style lang="scss" scoped>
 .business-areas {
   &__item-header{
